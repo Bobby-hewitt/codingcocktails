@@ -13,7 +13,7 @@ class OrderConfirmation extends Component {
   }
 
   componentWillMount(){
-    this.setState({orderUrl: 'localhost:3000/order/' + this.props.match.params.id })
+    this.setState({orderUrl: 'www.codingcocktails.com/order/' + this.props.match.params.id })
   }
 
 

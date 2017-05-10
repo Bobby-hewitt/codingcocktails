@@ -234,7 +234,7 @@ console.log(this.props)
 
   submit(){
     if (window.confirm('Confirm submission') === true) {
-    var orderNumber = this.state.title + Math.round(Math.random() *10000)
+    var orderNumber = this.state.title.toLowerCase() + Math.round(Math.random() *10000)
     orderNumber = orderNumber.replace(/\s+/g, '');
     var self = this;
     this.setState({orderNumber})
