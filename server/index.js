@@ -1,9 +1,9 @@
-'use strict';
+var express = require('express');
+var app = express();
+var server = require('http').Server(app);
 
-const app = require('./app');
 
-const PORT = process.env.PORT || 9000;
+server.listen( process.env.PORT || 3000 );
 
-app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}!`);
-});
+app.use(express.static('./build', { maxAge: 1 }));
+
