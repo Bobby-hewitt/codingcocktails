@@ -1,9 +1,9 @@
-var express = require('express');
-var app = express();
-var server = require('http').Server(app);
+'use strict';
 
+const app = require('./app');
 
-server.listen( process.env.PORT || 3000 );
+const PORT = process.env.PORT || 3000;
 
-app.use(express.static('./build', { maxAge: 1 }));
-
+app.listen(PORT, () => {
+  console.log(`App listening on port ${PORT}!`);
+});
