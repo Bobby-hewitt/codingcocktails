@@ -11,5 +11,5 @@ console.log('the server is running ')
 
 app.get('/*', function (req, res) {
 	console.log('the server is running ')
-   res.sendFile(path.join(__dirname, 'build', 'index.html'));
+   res.sendFile(path.join(__dirname, '../build', 'index.html'));
  });
