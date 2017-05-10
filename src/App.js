@@ -3,6 +3,7 @@ import './App.css';
 import $ from "jquery";
 import HtmlContainer from './components/htmlContainer'
 import CssContainer from './components/cssContainer'
+import Helper from './components/helper'
 import { Link } from 'react-router-dom'
 
 class App extends Component {
@@ -10,6 +11,7 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = {
+      helper: true,
       orderUrl: '',
       orderNumber: '',
       title: '...',
@@ -138,6 +140,7 @@ console.log(this.props)
   }
 
   changeCss(item, property, value){
+    this.setState({helper: false})
     if (property !== 'fontFamily'){
     value = value.replace(/\s+/g, '');
     }
@@ -151,7 +154,7 @@ console.log(this.props)
   }
 
   updateState(item, payload, key){
-
+    this.setState({helper: false})
     switch(item){
       case 'title':
         this.setState({title: payload})
@@ -318,6 +321,7 @@ console.log(this.props)
 
           <div className="sectionContainer containerCss" id="rightContainer">
             <div className="confusingContainer">
+            {(this.state.helper) ? <Helper /> : null}
             <h1 className="titleCss containersCss">{this.state.title}</h1>
 
             <div className="ingredientsCss containersCss">

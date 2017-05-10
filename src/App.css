@@ -502,4 +502,13 @@ opacity: 1;
     100% { -webkit-transform: scale(1.05); }
 }
 
+#helperContainer{
+  position: absolute;
+  top:30px;
+  right:30px;
+  background: #f1f1f1;
+  border-radius: 20px;
+  padding:30px;
+  width:200px;
+}
 
