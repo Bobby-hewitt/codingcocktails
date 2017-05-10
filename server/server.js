@@ -4,8 +4,8 @@ var server = require('http').Server(app);
 var path = require('path')
 
 server.listen( process.env.PORT || 3000 );
+app.use(express.static(path.resolve(__dirname, '..', 'build')));
 
-app.use(express.static('./build', { maxAge: 1 }));
 
 console.log('the server is running ')
 
