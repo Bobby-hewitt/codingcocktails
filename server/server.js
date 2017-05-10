@@ -9,7 +9,6 @@ app.use(express.static('./build', { maxAge: 1 }));
 
 console.log('the server is running ')
 
-app.get('/*', function (req, res) {
-	console.log('the server is running ')
-   res.sendFile(path.join(__dirname, '../build', 'index.html'));
- });
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
+});
