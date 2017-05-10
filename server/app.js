@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 
 // Serve static assets
-app.use(express.static(path.resolve(__dirname, '..', 'build')));
+app.use(express.static('./build', { maxAge: 1 }));
 
 
 
