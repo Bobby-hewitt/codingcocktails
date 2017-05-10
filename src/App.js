@@ -295,7 +295,7 @@ class App extends Component {
             </div>
             <div id="textEditor">
               <div  className="codeContainer" id="htmlContainer">
-                <HtmlContainer addItem={this.addItem.bind(this)} removeItem={this.removeItem.bind(this)}updateState={this.updateState.bind(this)}ingredients={this.state.ingredients} methods={this.state.methods} {...this.state}/>
+                <HtmlContainer addItem={this.addItem.bind(this)} removeItem={this.removeItem.bind(this)}updateState={this.updateState.bind(this)}ingredients={this.state.ingredients} footer="boobyy"methods={this.state.methods} {...this.state}/>
               </div>
                <div  className="codeContainer" id="cssContainer">
                 <CssContainer 

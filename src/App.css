@@ -482,6 +482,14 @@ list-style-position: inside;
   display: inline-block;
 }
 
+#orderRenderLogo{
+  position: absolute;
+  top:50px;
+  right:50px;
+  width:auto;
+  height:50px;
+}
+
 .selectCocktailButton:hover{
  -webkit-animation: scale 0.3s linear forwards;
   animation: scale 0.3s  linear forwards;

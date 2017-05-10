@@ -79,6 +79,9 @@ class HtmlContainer extends Component {
 		<Comment lang='html' comment="You can find an image you would like to use on the internet.  Right click it, select 'copy image source' and paste the result here"/>
 			<ImageTag identifier="imageTag" margin="45px" contenteditable={true} index="0" item="image" updateState={this.updateState.bind(this)} content={this.props.image}/>
 			<HtmlSingleTag tag="/div" margin="30px" />
+			<HtmlSingleTag tag="div" renderId="footer" margin="30px" />
+				
+			<HtmlSingleTag tag="/div" margin="30px" />
    			<HtmlSingleTag tag="/body" margin="15px" />
 
    			<HtmlSingleTag tag="/html" margin="0px" />
