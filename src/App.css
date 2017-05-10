@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black|Cardo|Cinzel|Dancing+Script|Droid+Sans|Francois+One|Josefin+Sans|Love+Ya+Like+A+Sister|Righteous|Satisfy');
+/*font-family: 'Satisfy', cursive;
+font-family: 'Dancing Script', cursive;
+font-family: 'Droid Sans', sans-serif;
+font-family: 'Love Ya Like A Sister', cursive;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Francois One', sans-serif;
+font-family: 'Archivo Black', sans-serif;
+font-family: 'Cinzel', serif;
+font-family: 'Righteous', cursive;
+font-family: 'Cardo', serif;
+*/
+
+@font-face {
+  font-family: 'standard';
+  src: local('standard'), url('./fonts/NexaRustSans-Black.otf') format('otf');
+}
+*{
+font-family: 'Droid Sans', sans-serif;
+  width:auto;
+  margin:0;
+  padding:0;
+}
+.App{
+  width: 100%;
+  height:100%;
+  position: fixed;
+}
+#centerGlass{
+  position:absolute;
+  top:0;
+  left:50%;
+  transform: translateX(-50%);
+  height:100%;
+  width:auto;
+}
+
+.orderConfirmationContainer{
+  width:100%;
+  color:#f1f1f1;
+  text-align: center;
+  margin-top: 50vh;
+  transform:translateY(-50%);
+}
+
+.fullscreen{
+  position:absolute;
+  top:10px;
+  right:10px;
+  width:auto;
+  height:30px;
+  cursor: pointer;
+}
+
+.sectionContainer{
+  height:100%;
+  width:50%;
+  display: inline-block;
+}
+
+.logo{
+  position: absolute;
+  top:010px;
+  left:10px;
+  height:30px;
+  width:auto;
+}
+
+.containerCss{
+  background-position: center;
+  overflow: hidden;
+  position: absolute;
+  left:50%;
+  height:100%;
+  width:50%;
+
+}
+
+#leftNav{
+  position: relative;
+  background-color: #171814;
+  height:20vh;
+  width:100%;
+}
+
+.htmlTag{
+
+
+  margin:0px;
+  padding:0px;
+  color:#a6e22e;
+}
+.htmlBrackets{
+  color:rgb(238,38,134);
+}
+.editableContent{
+  font-size: 18px;
+  font-weight: bolder;
+  background:rgb(60,60,60);
+  color:white;
+} 
+
+.editableContent:focus{
+  outline: none;
+}
+.tagContainer{
+  font-size: 16px;
+  padding:0;
+  line-height:20px;
+}
+
+.marginTop{
+  margin-top: 16px;
+}
+.inline{
+  width:auto;
+  display: inline-block;
+}
+
+#textEditor{
+  border-top: 3px solid rgb(161,161,161);
+  position: relative;
+  overflow: scroll;
+  height:80vh;
+  width:100%;
+  background-color: #272822;
+}
+
+.button{
+  height:15px;
+  width:15px;
+  border-radius:8px;
+  line-height: 15px;
+  border:none;
+
+}
+
+.addButton{
+    background:rgb(40,220,45);
+}
+
+.removeButton{
+
+  margin-left: 10px;
+  background-color:rgb(238,38,134);
+}
+
+.codeContainer{
+  padding: 30px;
+}
+
+.uneditable{
+  color:rgb(255,200,200);
+  background:none;
+}
+
+/*CSS CONTAINER*/
+#cssContainer{
+  display: none;
+}
+
+
+
+/*LEFT NAV*/
+.editorTab{
+  cursor: pointer;
+  width:120px;
+  height:40px;
+  position: absolute;
+  bottom:0;
+  line-height: 40px;
+  text-align: center;
+  color:rgb(151,151,151);
+}
+#htmlTab{
+  left:0px;
+}
+#cssTab{
+  left:120px;
+}
+
+#submitButton{
+    background-color: #171814;
+    color:white;
+  right:0px;
+  bottom:0;
+}
+.activeTab{
+  background-color: rgb(39,40,34);
+}
+.inactiveTab{
+  background-color: rgb(57,57,55);
+}
+
+.cssSelector{
+      color:rgb(40,220,45);
+}
+.cssProperty{
+   margin-left: 15px;
+  color:rgb(102,217,239);
+}
+.cssValue{
+  margin-left: 5px;
+  color:white;
+}
+
+.cssBracket{
+  color:white;
+}
+
+
+/*RENDER CONTAINER*/
+
+.comment{
+  color:rgb(101,101,101);
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.methodsCss{
+
+}
+.ingredientsCss{
+  width:100%;
+}
+
+#rightContainer{
+    overflow: scroll;
+  width:50%;
+}
+
+.confusingContainer{
+  overflow: scroll;
+  padding: 30px;
+    overflow: scroll;
+
+}
+.htmlAttr{
+    color:rgb(102,217,239);
+}
+
+.htmlClassId{
+  color:rgb(230,215,99);
+}
+
+#loadingContainer{
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-top:-50px;
+  transform: translate(-50%,-50%)
+}
+
+.loadingText{
+  color:#f1f1f1;
+}
+
+#spinner{
+  width:100px;
+  height:100px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-left: -50px;
+  margin-top: 20px;
+
+
+  -webkit-animation: spin 1s infinite linear;
+  animation: spin 1s infinite linear;
+      -webkit-animation-timing-function: ease-in-out; /* Safari 4.0 - 8.0 */
+    animation-timing-function: ease-in-out;
+  
+}
+
+.logoRelative{
+  width:100px;
+  height:100px}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: scale(1); }
+    50% { -webkit-transform: scale(1.2);}
+    100% { -webkit-transform: scale(1); }
+}
+@keyframes spin {
+    0% { -webkit-transform: scale(1); }
+    50% { -webkit-transform: scale(1.2);}
+    100% { -webkit-transform: scale(1); }
+}
+  @-moz-keyframes spin {
+    0% { -webkit-transform: scale(1); }
+    50% { -webkit-transform: scale(1.2);}
+    100% { -webkit-transform: scale(1); }
+}
+
+.ingredientCss{
+  overflow:scroll;
+list-style-type: bullet;
+list-style-position: inside;
+}
+.methodCss{
+  overflow:scroll;
+list-style-type: decimal;
+list-style-position: inside;
+}
+
+.titleCss{
+
+}
+
+.rendercontainer{
+  overflow:scroll;
+  overflow-x:hidden;
+}
+.imageCss{
+
+}
+
+
+
+/*GET ORDER*/
+
+#getOrderContainer{
+    background: rgba(20,20,20,0.9);
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0;
+  left:0;
+}
+
+#getOrderContentContainer{
+
+  border: 2px solid #f4f4f4;
+  position: fixed;
+  bottom:50px;
+  left:50px;
+  right:50px;
+  top:150px;
+  background: #f1f1f1;
+  overflow: scroll;
+}
+
+#getOrderTitle{
+  z-index: 10;
+  color:#f1f1f1;
+  font-family: satisfy;
+  font-size: 50px;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+#orderNumberContainer{
+  width:60%;
+  position: absolute;
+  top:50%;
+  margin-left:20%;
+  transform:translateY(-50%);
+}
+
+#orderNumberInput{
+  display:inline;
+  line-height: 50px;
+  font-size: 30px;
+  background:transparent;
+  border: none;
+  border-bottom: 2px solid black;
+}
+
+#orderNumberContainer:focus{
+  outline:transparent;
+}
+
+#orderNumberSubmit{
+  width:20%;
+  font-size: 30px;
+    border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  background:0;
+  display:inline;
+  margin:0;
+  padding:0;
+  height:50px;
+}
+
+
+/*SELECT A COCKTAIL*/
+
+.homeBackground{
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top:0;
+  left:0;
+   background: url('../src/images/homeBackground.jpg');
+   background-position: center;
+   background-size: cover;
+   overflow:scroll;
+}
+
+.homeOverlay{
+  position: fixed;
+  top:0;
+  left:0;
+    width: 100%;
+  height:100%;
+  background: rgba(20,20,20,0.9);
+}
+
+
+#homeContainer{
+  height:100%;
+  color:#f1f1f1;
+  position:relative;
+  text-align: center;
+  width:400px;
+  padding-left: 500px;
+  padding-right: 500px;
+  margin-left: 50%;
+  transform:translateX(-50%);
+}
+
+
+#homeLogo{
+  margin-top: 80px;
+  width:350px;
+  height:auto;
+}
+
+#mofoLogo{
+  margin-top: 40px;
+    width:200px;
+  height:auto;
+}
+
+
+
+
+
+
+#welcomeText{
+  font-size: 13px;
+  margin-top: 40px;
+ text-align: center;
+}
+
+
+.horizontalDivider{
+  margin-top: 40px;
+  margin-left: -50px;
+  width:500px;
+  height:0px;
+  border: 2px solid white ;
+  opacity: 0.2;
+}
+
+
+#selectCocktailContainer{
+
+}
+#selectCocktailHeader{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.selectCocktailButton{
+    display: inline-block;
+    width:150px;
+    margin-left:10px;
+  cursor:pointer;
+  text-align: center;
+  line-height: 40px;
+  margin-top:10px;
+  height:40px;
+  border-radius: 20px;
+  background: transparent; 
+}
+
+#selectCocktail{
+  margin-top: 40px;
+  width:600px;
+  margin-left:-100px;
+  display: inline-block;
+}
+
+.selectCocktailButton:hover{
+ -webkit-animation: scale 0.3s linear forwards;
+  animation: scale 0.3s  linear forwards;
+      -webkit-animation-timing-function: ease-in-out; /* Safari 4.0 - 8.0 */
+    animation-timing-function: ease-in-out;
+opacity: 1;
+}
+@-webkit-keyframes scale {
+    0% { -webkit-transform: scale(1); }   
+    100% { -webkit-transform: scale(1.05); }
+}
+@keyframes scale {
+    0% { -webkit-transform: scale(1); }
+    100% { -webkit-transform: scale(1.05); }
+}
+  @-moz-keyframes scale {
+    0% { -webkit-transform: scale(1); }
+    100% { -webkit-transform: scale(1.05); }
+}
+
+

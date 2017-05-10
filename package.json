@@ -1,0 +1,22 @@
+{
+  "name": "coding-cocktails",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "firebase": "^3.9.0",
+    "jquery": "^3.2.1",
+    "path": "^0.12.7",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1"
+  },
+  "devDependencies": {
+    "react-scripts": "0.9.5"
+  },
+  "scripts": {
+    "start": "node server/server.js",
+   
+  }, 
+  "proxy": "http://localhost:3001"
+}
