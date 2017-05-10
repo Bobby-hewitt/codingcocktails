@@ -133,10 +133,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-
-// window.onbeforeunload = function() { return "You work will be lost."; };
-console.log(this.props)
-
+    window.onbeforeunload = function() { return "Your work will be lost." };
   }
 
   changeCss(item, property, value){
@@ -236,7 +233,7 @@ console.log(this.props)
   }
 
   submit(){
-    if (window.confirm('Confirm submission') === true) {
+
     var orderNumber = this.state.title.toLowerCase() + Math.round(Math.random() *10000)
     orderNumber = orderNumber.replace(/\s+/g, '');
     var self = this;
@@ -264,7 +261,7 @@ console.log(this.props)
     })
     var url = '/order-confirmation/' + orderNumber
     this.props.history.replace(url,'localhost:3000/')
-    }
+    
   }
 
   fullscreen(){
