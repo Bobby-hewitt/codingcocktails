@@ -12,6 +12,7 @@ class OrderRender extends Component {
       ingredients: [],
       methods: [],
       title: '',
+      copyight: '',
       loading: true
     }
   }
@@ -21,9 +22,10 @@ class OrderRender extends Component {
     this.props.FirebaseApp.database().ref('/' + this.props.orderId).once('value').then((database) => {
 
       var data = database.val()
-      console.log(data)
-        self.setState({image: data.image, ingredients: data.ingredients, methods: data.methods, title: data.title}, () => {
+    
+        self.setState({image: data.image, ingredients: data.ingredients, methods: data.methods, title: data.title, copyright: data.copyright}, () => {
           var topKeys = Object.keys(data.css)
+    
           for (var i = 0; i < topKeys.length; i++){
             var attrKeys = Object.keys(data.css[topKeys[i]])
             for (var j = 0; j < attrKeys.length; j++){
@@ -33,13 +35,14 @@ class OrderRender extends Component {
               
               if (value.length > 0){
                 var element = '.render' + topKeys[i]
-                console.log(property)
+            
                 if (property === 'fontSize'){
                   value = (parseInt(value) /4) * 5
-                  console.log(value)
+          
                 }
+                console.log(element, property, value)
                 $(element).css({[property]: value})
-                console.log(topKeys[i], property, value)
+                
               }
             }
             if (i === topKeys.length -1 ){
@@ -61,41 +64,50 @@ class OrderRender extends Component {
 
 
 
-console.log(this.props)
 
   }
 
   render() {
+
     return (
-      <div className="rendercontainer" style={{width:'100%', height: '100%', position:'absolute', top:0, left:0}} >
-          <div style={{padding:'20px'}}>
-          <h1 id="getOrderTitle">Coding Cocktails</h1>
-          <h1 className="rendertitle rendercontainers">{this.state.title}</h1>
-          <div className="renderingredients rendercontainers">
-            <h3 className="renderheaders">Ingredients</h3>
-            <ul>
-              {this.state.ingredients.map((ingredient, i) => {
-                return(
-                <li key={i} className="renderingredient renderlistItem">{ingredient}</li>
-                )
-              })}  
-            </ul>
+      <div className=" rendercontainer">
+            <div className="renderheaderContainer renderheaderContainer">
+              <h1 id="getOrderTitle" className="renderheaderContent">Coding Cocktails</h1>
+            </div>
+            <div style={{padding:'5%'}}>
+                  <h1 className="rendertitle rendercontainers">{this.props.title}</h1>
+                  <img className="renderimage rendercontainers" src={this.state.image} />
+
+                  <div className="renderingredients rendercontainers">
+                    <h3 className="rendersectionHeader">Ingredients</h3>
+                    <ul>
+                      {this.state.ingredients.map((ingredient, i) => {
+                        return(
+                          <li className="renderingredient renderlistItem" key={i}>{ingredient}</li>
+                        )
+                      })}
+                    </ul>
+                  </div>
+
+
+                <div className="rendermethods rendercontainers">
+                <h3 className="rendersectionHeader">Method</h3>
+                  <ul>
+                    {this.state.methods.map((method, i) => {
+                      return(
+                        <li className="rendermethod renderlistItem" key={i}>{method}</li>
+                      )
+                    })}
+                  </ul>
+                                  </div>
+                </div>
+                <div className="renderfooterContainer rendercontainers">
+                  <p className="renderfooterContent">{this.state.copyright}</p>
+                </div>
+                {(this.state.loading) ? <LoadingScreen /> : null}
           </div>
-          <div className="rendermethods rendercontainers">
-            <h3 className="renderheaders">Methods</h3>
-            <ul>
-              {this.state.ingredients.map((method, i) => {
-                return(
-                <li key={i} className="rendermethod renderlistItem">{method}</li>
-                )
-              })}  
-            </ul>
-          </div>
-          <img src={this.state.image} className="rendercontainers renderimage" style={{zIndex: -1}}/>
-          {(this.state.loading) ? <LoadingScreen/> : null}
-          </div>
-      </div>
     );
+
   }
 }
 

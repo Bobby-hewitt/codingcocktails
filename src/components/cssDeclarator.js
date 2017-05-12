@@ -35,29 +35,7 @@ class CssDeclarator extends Component {
   }
 
   render() {
-    
-    if (this.props.hasPosition !== true || (this.props.hasPosition && this.props.properties['position'].value.includes('absolute'))){
-      return (
 
-        <div>
-          <p className="cssBracket"><span className="cssSelector">{this.props.declarator}</span> &#123;</p>
-            {this.state.keys.map((key, i) => {
-              return (
-                <div key={i}>
-                  <p className="inline cssProperty">{this.props.properties[key].propertyName}: </p>
-                  <CssInput 
-                    changeCss={this.changeCss.bind(this)} 
-                    identifier={this.props.item + this.props.properties[key].property + 'Input'} 
-                    item={this.props.item} property={this.props.properties[key].property} 
-                    value={this.props.properties[key].value}/>
-                </div>
-              )
-            })}
-          <p className="cssBracket">&#125;</p>
-      </div>
-      );
-    }
-    else {
       return (
         <div>
           <p className="cssBracket"><span className="cssSelector">{this.props.declarator}</span> &#123;</p>
@@ -79,7 +57,7 @@ class CssDeclarator extends Component {
           <p className="cssBracket">&#125;</p>
       </div>
       );
-    }
+    
   }
 }
 

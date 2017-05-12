@@ -43,9 +43,19 @@ class HtmlContainer extends Component {
 	   		<Comment lang='html' comment="The <body> holds all of the information which is ultimately seen by the user"/>
 			<HtmlSingleTag tag="body" margin="15px" />
 			<HtmlSingleTag tag="div" renderId="background" margin="30px" />
+			
+			<HtmlSingleTag tag="div" renderId="headerContainer" margin="45px" />
+				<HtmlTag margin='60px' contenteditable={false} content="Coding Cocktails" tag="h1" renderId="headerContent" identifier="uneditable"/>
+			<HtmlSingleTag tag="/div" margin="45px" />
+
+
+			
+
 			<Comment lang='html' comment="'h' tags are for headers.  <h1> is the biggest, it goes right through to <h6>"/>
 			<HtmlTag margin='45px' contenteditable={true} content={this.props.title} tag="h1" renderId="title"  renderClass="container" updateState={this.updateState.bind(this)} index="0" item="title"identifier="title"/>
-			   			{/*method*/}
+			   	
+
+			 <ImageTag identifier="imageTag" margin="45px" index="0" item="image" updateState={this.updateState.bind(this)} content={this.props.image}/>
 			
 			{/*ingredients*/}
 			<HtmlSingleTag tag="article" renderClass="ingredients container" margin="45px" />
@@ -76,14 +86,13 @@ class HtmlContainer extends Component {
 			<HtmlSingleTag tag="/ol" margin="60px" />
 			<HtmlSingleTag tag="/article" margin="45px" />
 
-		{/*image*/}
-		<Comment lang='html' comment="You can find an image you would like to use on the internet.  Right click it, select 'copy image source' and paste the result here"/>
-			<ImageTag identifier="imageTag" margin="45px" index="0" item="image" updateState={this.updateState.bind(this)} content={this.props.image}/>
+		
+			
 			<HtmlSingleTag tag="/div" margin="30px" />
 
 		{/*Footer*/}
-			<HtmlSingleTag tag="div" renderId="footer" margin="30px" />
-			<HtmlTag margin='45px' contenteditable={true} content={this.props.copyright} tag="p" renderId="copyright"  renderClass="copyright" updateState={this.updateState.bind(this)} index="0" item="copyright" identifier="copyright"/>
+			<HtmlSingleTag tag="div" renderId="footerContainer" margin="30px" />
+			<HtmlTag margin='45px' contenteditable={true} content={this.props.copyright} tag="p" renderId="footerContent"  renderClass="copyright" updateState={this.updateState.bind(this)} index="0" item="copyright" identifier="copyright"/>
 			<HtmlSingleTag tag="/div" margin="30px" />
    			<HtmlSingleTag tag="/body" margin="15px" />
 

@@ -260,7 +260,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
 .knockupContainer{
   transform:translate(-50%, -50%);
-  width:320px;
+  width:330px;
   height:auto;
   top:50%;
   left:50%;
@@ -280,15 +280,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
 .scrollableContainer {
    background:white;
-  padding: 5%;
-  padding-top: 10%;
-  padding-bottom: 10%;
+    margin-right: 5%;
+
+  margin-top: 5%;
+  padding-bottom: 4%;
   position: absolute;
   top: 10%;
-  left: 5%;
+  left: 6%;
   bottom:10%;
+  right:12%;
   width: 90%;
-
+  overflow-x: hidden; 
   overflow-y: scroll; 
   z-index: 0;
 }
@@ -379,81 +381,20 @@ list-style-type: decimal;
 list-style-position: inside;
 }
 
-.titleCss{
-
-}
 
 .rendercontainer{
   overflow:scroll;
   overflow-x:hidden;
 }
-.imageCss{
-
-}
 
 
 
-/*GET ORDER*/
-
-#getOrderContainer{
-    background: rgba(20,20,20,0.9);
-  width:100%;
-  height:100%;
-  position:fixed;
-  top:0;
-  left:0;
-}
-
-#getOrderContentContainer{
-
-  border: 2px solid #f4f4f4;
-  position: fixed;
-  bottom:50px;
-  left:50px;
-  right:50px;
-  top:150px;
-  background: #f1f1f1;
-  overflow: scroll;
-}
 
 #getOrderTitle{
   z-index: 10;
   color:black;
   font-family: satisfy;
-  font-size: 40px;
-}
-
-#orderNumberContainer{
-  width:60%;
-  position: absolute;
-  top:50%;
-  margin-left:20%;
-  transform:translateY(-50%);
-}
-
-#orderNumberInput{
-  display:inline;
-  line-height: 50px;
-  font-size: 30px;
-  background:transparent;
-  border: none;
-  border-bottom: 2px solid black;
-}
-
-#orderNumberContainer:focus{
-  outline:transparent;
-}
-
-#orderNumberSubmit{
-  width:20%;
-  font-size: 30px;
-    border-left: 2px solid black;
-  border-bottom: 2px solid black;
-  background:0;
-  display:inline;
-  margin:0;
-  padding:0;
-  height:50px;
+  font-size: 35px;
 }
 
 
@@ -595,5 +536,34 @@ opacity: 1;
   text-align: center;
   width:150px;
   z-index: 2;
+}
+
+.headerContainer{  
+  padding-right: 10px;
+  padding-bottom: 10px;
+  margin-top: -10%;
+  padding-top: 13%;
+  text-align: center;
+  width:100%;
+}
+.footerContainerCss{  
+  width:100%;
+  margin-left: -5%;
+  padding-left: 10%;
+    padding-right: 10px;
+}
+.renderheaderContainer{  
+  padding-right: 10px;
+  padding-bottom: 10px;
+  margin-top: -10%;
+  padding-top: 13%;
+  text-align: center;
+  width:100%;
+}
+.renderfooterContainerCss{  
+  width:100%;
+  margin-left: -5%;
+  padding-left: 10%;
+    padding-right: 10px;
 }
 

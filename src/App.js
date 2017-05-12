@@ -20,11 +20,29 @@ class App extends Component {
       fullscreen: false,
       methods: ['Select your glass','...','...'],
       ingredients: ['...','...','...'],
-      copyright: 'hello',
+      copyright: "...'s drink order",
         containersCss: {
-          marginBottom: {property: 'marginBottom', value: '  ', positionDependent: true, propertyName: 'margin-bottom'},
+          marginTop: {property: 'marginTop', value: '  ', positionDependent: false, propertyName: 'margin-top'},
         },
-        headersCss: {
+        headerContainerCss: {
+          backgroundColor: {property: 'backgroundColor', value: 'white', positionDependent:false, propertyName: 'background-color'},
+           marginBottom: {property: 'marginBottom', value: '  ', positionDependent: false, propertyName: 'margin-bottom'},
+          borderBottomColor: {property: 'borderBottomColor', value: '  ', positionDependent: false, propertyName: 'border-bottom-color'},
+          borderBottomWidth: {property: 'borderBottomWidth', value: '  ', positionDependent: false, propertyName: 'border-bottom-width'},
+          borderBottomStyle: {property: 'borderBottomStyle', value: '  ', positionDependent: false, propertyName: 'border-bottom-style'},
+        },
+        headerContentCss: {
+          fontFamily: {property: 'fontFamily', value: '', positionDependent:false, propertyName: 'font-family'},
+          color: {property: 'color', value: '', positionDependent:false, propertyName: 'color'},
+          fontSize: {property: 'fontSize', value: '', positionDependent:false, propertyName: 'font-size'},
+        },
+        footerContentCss: {
+          textAlign: {property: 'textAlign', value: '', positionDependent: false, propertyName: 'text-align'},
+          fontFamily: {property: 'fontFamily', value: '', positionDependent:false, propertyName: 'font-family'},
+          color: {property: 'color', value: '', positionDependent:false, propertyName: 'color'},
+          fontSize: {property: 'fontSize', value: '', positionDependent:false, propertyName: 'font-size'},
+        },
+        sectionHeaderCss: {
           fontFamily: {property: 'fontFamily', value: '', positionDependent:false, propertyName: 'font-family'},
           color: {property: 'color', value: '', positionDependent:false, propertyName: 'color'},
           fontSize: {property: 'fontSize', value: '', positionDependent:false, propertyName: 'font-size'},
@@ -39,47 +57,30 @@ class App extends Component {
           fontFamily: {property: 'fontFamily', value: '', positionDependent:false, propertyName: 'font-family'},
         },
         imageCss:{
+          marginLeft: {property: 'marginLeft', value: '', positionDependent: false, propertyName: 'margin-left'},
           width: {property: 'width', value: '', positionDependent: false, propertyName: 'width'},
           height: {property: 'height', value: '', positionDependent: false, propertyName: 'height'},
-          position: {property: 'position', value: '', positionDependent: false, propertyName: 'position'},
-          top: {property: 'top', value: '', positionDependent: true, propertyName: 'top'},
-          left: {property: 'left', value: '', positionDependent: true, propertyName: 'left'},
-          bottom: {property: 'bottom', value: '', positionDependent: true, propertyName: 'bottom'},
-          right: {property: 'right', value: '', positionDependent: true, propertyName: 'right'},
+
         },
         titleCss:{
+          textAlign: {property: 'textAlign', value: '', positionDependent: false, propertyName: 'text-align'},
           fontFamily: {property: 'fontFamily', value: '', positionDependent: false, propertyName: 'font-family'},
           color: {property: 'color', value: '', positionDependent: false, propertyName: 'color'},
           fontSize: {property: 'fontSize', value: '', positionDependent: false, propertyName: 'font-size'},
-          position: {property: 'position', value: '', positionDependent: false, propertyName: 'position'},
-          top: {property: 'top', value: '', positionDependent: true, propertyName: 'top'},
-          left: {property: 'left', value: '', positionDependent: true, propertyName: 'left'},
-          bottom: {property: 'bottom', value: '', positionDependent: true, propertyName: 'bottom'},
-          right: {property: 'right', value: '', positionDependent: true, propertyName: 'right'},
-
-        },
-        methodsCss: {
-          width: {property: 'width', value: '', positionDependent: false, propertyName: 'width'},
-          position: {property: 'position', value: '', positionDependent: false, propertyName: 'position'},
-          top: {property: 'top', value: '', positionDependent: true, propertyName: 'top'},
-          left: {property: 'left', value: '', positionDependent: true, propertyName: 'left'},
-          bottom: {property: 'bottom', value: '', positionDependent: true, propertyName: 'bottom'},
-          right:{property: 'right', value: '', positionDependent: true, propertyName: 'right'},
-        },
-        ingredientsCss:{
-          width: {property: 'width', value: '', positionDependent: false, propertyName: 'width'},
-          position: {property: 'position', value: '', positionDependent: false, propertyName: 'position'},
-          top: {property: 'top', value: '', positionDependent: true, propertyName: 'top'},
-          left: {property: 'left', value: '', positionDependent: true, propertyName: 'left'},
-          bottom: {property: 'bottom', value: '', positionDependent: true, propertyName: 'bottom'},
-          right: {property: 'right', value: '', positionDependent: true, propertyName: 'right'},
           
         },
+          
         methodCss:{
-          listStyleType: {property: 'listStyleType', value: 'bullet', positionDependent: false, propertyName: 'list-style-type'},
+          listStyleType: {property: 'listStyleType', value: 'decimal', positionDependent: false, propertyName: 'list-style-type'},
         },
         ingredientCss:{
           listStyleType: {property: 'listStyleType', value: 'bullet', positionDependent: false, propertyName:  'list-style-type'},
+        },
+        footerContainerCss:{
+          marginTop: {property: 'marginTop', value: '', positionDependent: true, propertyName: 'margin-top'},
+          backgroundColor: {property: 'backgroundColor', value: 'white', positionDependent:false, propertyName: 'background-color'},
+          paddingTop: {property: 'paddingTop', value: '  ', positionDependent: false, propertyName: 'padding-top'},
+          paddingBottom: {property: 'paddingBottom', value: '  ', positionDependent: false, propertyName: 'padding-bottom'},
         }
 
     }
@@ -256,16 +257,18 @@ class App extends Component {
       ingredients: this.state.ingredients,
       copyright: this.state.copyright,
       css: {
+        footerContent: this.state.footerContentCss,
+        footerContainer: this.state.footerContainerCss,
+        headerContent: this.state.headerContentCss,
+        headerContainer: this.state.headerContainerCss,
         listItem: this.state.listItemCss,
         container: this.state.containerCss,
         image: this.state.imageCss,
         title: this.state.titleCss,
-        containers: this.state.containersCss,
-        methods: this.state.methodsCss,
+        containers: this.state.containersCss,     
         method: this.state.methodCss,
-        ingredients: this.state.ingredientsCss,
         ingredient: this.state.ingredientCss,
-        headers: this.state.headersCss
+        sectionHeader: this.state.sectionHeaderCss
       }
     }
     this.props.FirebaseApp.database().ref('/').update({
@@ -313,16 +316,18 @@ class App extends Component {
               </div>
                <div  className="codeContainer" id="cssContainer">
                 <CssContainer 
+                  footerContainerCss={this.state.footerContainerCss}
+                  footerContentCss={this.state.footerContentCss}
+                  headerContentCss={this.state.headerContentCss}
+                  headerContainerCss={this.state.headerContainerCss}
                   listItemCss={this.state.listItemCss}
                   headersCss={this.state.headersCss}
                   changeCss={this.changeCss.bind(this)}
                   containersCss={this.state.containersCss}
                   containerCss={this.state.containerCss}
-                  headersCss={this.state.headersCss}
+                  sectionHeaderCss={this.state.sectionHeaderCss}
                   imageCss={this.state.imageCss}
                   titleCss={this.state.titleCss}
-                  methodsCss={this.state.methodsCss}
-                  ingredientsCss={this.state.ingredientsCss}
                   methodCss={this.state.methodCss}
                   ingredientCss={this.state.ingredientCss} />
               </div>

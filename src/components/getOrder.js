@@ -23,9 +23,8 @@ class GetOrder extends Component {
 
   render() {
     return(
-      <div id="getOrderContainer">
-<h1 id="getOrderTitle">Coding Cocktails</h1>
-         
+      <div>
+          
           <OrderRender orderId={this.props.match.params.id} FirebaseApp={this.props.FirebaseApp}/>
          </div>
     )

@@ -20,6 +20,9 @@ class App extends Component {
         containersCss: {
           marginBottom: {property: 'marginBottom', value: '  ', positionDependent: true, propertyName: 'margin-bottom'},
         },
+        headerContainerCss: {
+          backgroundColor: {property: 'backgroundColor', value: 'white', positionDependent:false, propertyName: 'background-color'},
+        },
         headersCss: {
           fontFamily: {property: 'fontFamily', value: '', positionDependent:false, propertyName: 'font-family'},
           color: {property: 'color', value: '', positionDependent:false, propertyName: 'color'},
@@ -244,6 +247,7 @@ console.log(this.props)
       methods: this.state.methods,
       ingredients: this.state.ingredients,
       css: {
+        headerContainer: this.state.headerContainerCss
         listItem: this.state.listItemCss,
         container: this.state.containerCss,
         image: this.state.imageCss,
@@ -299,6 +303,7 @@ console.log(this.props)
               </div>
                <div  className="codeContainer" id="cssContainer">
                 <CssContainer 
+                  headerContainerCss={this.state.headerContainerCss}
                   listItemCss={this.state.listItemCss}
                   headersCss={this.state.headersCss}
                   changeCss={this.changeCss.bind(this)}
