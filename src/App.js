@@ -19,6 +19,7 @@ class App extends Component {
       fullscreen: false,
       methods: ['Select your glass','...','...'],
       ingredients: ['...','...','...'],
+      copyright: 'hello',
         containersCss: {
           marginBottom: {property: 'marginBottom', value: '  ', positionDependent: true, propertyName: 'margin-bottom'},
         },
@@ -174,7 +175,11 @@ class App extends Component {
       case 'image': 
        this.setState({image: payload})
        break;
-
+      case 'copyright':
+      this.setState({copyright: payload}, () => {
+        console.log(this.state.copyright)
+      })
+      break;
        default:
        return
     }
@@ -249,6 +254,7 @@ class App extends Component {
       methods: this.state.methods,
       ingredients: this.state.ingredients,
       css: {
+        copyright: this.state.copyright,
         listItem: this.state.listItemCss,
         container: this.state.containerCss,
         image: this.state.imageCss,
@@ -349,6 +355,7 @@ class App extends Component {
               </ul>
             </div>
             <img className="imageCss containersCss" src={this.state.image} />
+            <p>{this.state.copyright}</p>
 
           </div>
           </div>
