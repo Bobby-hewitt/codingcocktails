@@ -17,7 +17,7 @@ class App extends Component {
       title: '...',
       image: require('./images/cocktail.png'),
       fullscreen: false,
-      methods: ['...','...','...'],
+      methods: ['Select your glass','...','...'],
       ingredients: ['...','...','...'],
         containersCss: {
           marginBottom: {property: 'marginBottom', value: '  ', positionDependent: true, propertyName: 'margin-bottom'},
@@ -92,7 +92,8 @@ class App extends Component {
       this.setState({
                       image: 'http://www.pngmart.com/files/4/Mojito-Transparent-Background.png',
                       title: this.props.match.params.title, 
-                      ingredients: [this.props.match.params.firstIngredient, '...', '...']
+                      ingredients: [this.props.match.params.firstIngredient, '...', '...'],
+                      ingredientsComment: 'A standard Mojito usually contains Bacardi Carta Blanco, fresh lime, mint leaves, brown sugar, soda water'
                     })
       break
 
@@ -100,15 +101,17 @@ class App extends Component {
       this.setState({
                       image: 'http://cookdiary.net/wp-content/uploads/images/Pina-Colada_6552.png',
                       title: this.props.match.params.title, 
-                      ingredients: [this.props.match.params.firstIngredient, '...', '...']
+                      ingredients: [this.props.match.params.firstIngredient, '...', '...'],
+                      ingredientsComment: 'A standard Pina Colada usually contains Fresh pineapple chunks, pineapple Juice, caster sugar, coconut cream, Bacardi Carta Blanco'
                     })
       break
 
-      case 'Cosmopolitain':
+      case 'Cosmopolitan':
       this.setState({
                       image: 'http://www.uvvodka.com/wp-content/uploads/2013/01/recipelarge_crancosmo.png',
                       title: this.props.match.params.title, 
-                      ingredients: [this.props.match.params.firstIngredient, '...', '...']
+                      ingredients: [this.props.match.params.firstIngredient, '...', '...'],
+                      ingredientsComment: 'A standard Cosmopolitan usually contains orange vodka, Cointreau liqueur, cranberry juice, lime juice'
                     })
       break 
 
@@ -116,7 +119,8 @@ class App extends Component {
       this.setState({
                       image: 'https://img.clipartfest.com/dd80746a4d7a366cf720b7fea6fcb6c6_margarita-clipart-margarita-clip-art-images-clipartallcom-margarita-clipart-transparent_652-1097.png',
                       title: this.props.match.params.title, 
-                      ingredients: [this.props.match.params.firstIngredient, '...', '...']
+                      ingredients: [this.props.match.params.firstIngredient, '...', '...'],
+                      ingredientsComment: 'A standard Margarita usually contains tequila, triple sec liqueur, lime juice, 1 lime wedge, salt'
                     })
       break 
 
@@ -124,7 +128,8 @@ class App extends Component {
       this.setState({
                       image: 'https://cdn.monin.com/m/media/catalog/product/cache/1/small_image/400x/1b6ac95abd88a964e3097b207dd0be58/B/l/Blackberry_Green_Tea-20170331083336.png',
                       title: this.props.match.params.title, 
-                      ingredients: [this.props.match.params.firstIngredient, '...', '...']
+                      ingredients: [this.props.match.params.firstIngredient, '...', '...'],
+                      ingredientsComment: 'A standard Blackberry Mint Spritzer usually contains blackberries, mint leaves, lime Juice, simple syrup, soda water'
                     })
       break 
 
@@ -287,7 +292,8 @@ class App extends Component {
         <div className="App">
           <div className="sectionContainer" id="leftContainer">
             <div id="leftNav">
-              <img src={require('./images/logo2.png')} className="logo" />
+              <img src={require('./images/logoWhite.png')} className="editorLogo" />
+              <img src={require('./images/mofoWhite.png')} className="mofoEditorLogo" />
               <div className="editorTab activeTab" onClick={this.switchTab.bind(this,'html')}id="htmlTab"><h5>index.html</h5></div>
               <div className="editorTab inactiveTab" onClick={this.switchTab.bind(this,'css')}id="cssTab"><h5>app.css</h5></div>
               <div className="editorTab" onClick={this.submit.bind(this)}id="submitButton"><h5>SUBMIT ORDER</h5></div>

@@ -19,8 +19,9 @@ class CssContainer extends Component {
   render() {
     return (
     	<div>
-    	<Comment lang='css' comment="Font families:  Satisfy, Dancing Script, Droid Sans, Love Ya Like A Sister, Josefin Sans, Francois One, Archivo Black, Cinzel, Righteous, Cardo"/>
-    	<Comment lang='css' comment="My Style Sheet"/>
+        <Comment lang='css' comment="My Style Sheet"/>
+    	<Comment lang='css' comment="Some font families you can use are: Satisfy, Dancing Script, Droid Sans, Love Ya Like A Sister, Josefin Sans, Francois One, Archivo Black, Cinzel, Righteous, Cardo"/>
+    	
     	
     	<Comment lang='css' comment="It all looks a bit cramped at the moment, try adding a margin of '20px' to all the containers. The . before 'container' targets the class specified in the HTML, # targets the id"/>
     	

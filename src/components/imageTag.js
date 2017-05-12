@@ -21,7 +21,7 @@ self.props.updateState(self.props.item, data, self.props.index)
     return (
       <div className="tagContainer" style={{marginLeft: this.props.margin}}>
         <p className="inline htmlTag"><span className="htmlBrackets">&#60;</span>{'img'} <span className="htmlAttr">{"src='"}</span><span className="htmlBrackets"></span></p>
-        <p contentEditable={this.props.contenteditable} className={this.props.identifier + " inline editableContent"}> {this.props.content } </p>
+        <p contentEditable={this.props.contenteditable} className={this.props.identifier + " inline htmlClassId"}> {this.props.content } </p>
         <p className="inline"><span className="htmlAttr"> &#8201;&#32;id=&#39;</span><span className="htmlClassId">image</span><span className="htmlAttr">&#39;</span></p>
 <p className="inline"><span className="htmlAttr"> &#8201;&#32;class=&#39;</span><span className="htmlClassId">container</span><span className="htmlAttr">&#39;</span></p>
     <p className="inline htmlTag">{'/>'}</p>

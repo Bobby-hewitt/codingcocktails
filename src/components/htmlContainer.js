@@ -51,6 +51,7 @@ class HtmlContainer extends Component {
 			<HtmlSingleTag tag="article" renderClass="ingredients container" margin="45px" />
 			<HtmlTag margin='60px' contenteditable={false} content="Ingredients" tag="h3" identifier="uneditable"/>
 			<HtmlSingleTag tag="ul" margin="60px" />
+			<Comment lang='html' comment={this.props.ingredientsComment}/>
 			{this.props.ingredients.map((method, i) => {
 				return(
 				<HtmlTag showRemoveButton={true} removeItem={this.removeItem.bind(this)} margin='75px' key={i} item="ingredients" renderClass="listItem ingredient" updateState={this.updateState.bind(this)} index={i}contenteditable={true} content={method} tag="li" identifier={'ingredients' + i}/>
@@ -61,7 +62,7 @@ class HtmlContainer extends Component {
 			<HtmlSingleTag tag="/article" margin="45px" />
 			<HtmlSingleTag tag="article" renderClass="method container" margin="45px" />
 			<HtmlTag margin='60px' contenteditable={false} content="Method" tag="h3" identifier="uneditable"/>
-			<HtmlSingleTag tag="ul" margin="60px" />
+			<HtmlSingleTag tag="ol" margin="60px" />
 			{this.props.methods.map((method, i) => {
 				return(
 		
@@ -72,15 +73,15 @@ class HtmlContainer extends Component {
 			})}
 			<button onClick={this.addItem.bind(this, 'methods')} className="inline button addButton" style={{marginLeft: '75px'}}>+</button>
 			
-			<HtmlSingleTag tag="/ul" margin="60px" />
+			<HtmlSingleTag tag="/ol" margin="60px" />
 			<HtmlSingleTag tag="/article" margin="45px" />
 
 		{/*image*/}
 		<Comment lang='html' comment="You can find an image you would like to use on the internet.  Right click it, select 'copy image source' and paste the result here"/>
-			<ImageTag identifier="imageTag" margin="45px" contenteditable={true} index="0" item="image" updateState={this.updateState.bind(this)} content={this.props.image}/>
+			<ImageTag identifier="imageTag" margin="45px" index="0" item="image" updateState={this.updateState.bind(this)} content={this.props.image}/>
 			<HtmlSingleTag tag="/div" margin="30px" />
 			<HtmlSingleTag tag="div" renderId="footer" margin="30px" />
-				
+
 			<HtmlSingleTag tag="/div" margin="30px" />
    			<HtmlSingleTag tag="/body" margin="15px" />
 

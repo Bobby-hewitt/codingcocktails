@@ -18,8 +18,8 @@ class ImageTag extends Component {
       firstIngredient = 'Fresh Pineapple Chunks';
       break;
       
-      case 'COSMOPOLITAIN':
-      cocktail = 'Cosmopolitain';
+      case 'COSMOPOLITAN':
+      cocktail = 'Cosmopolitan';
       firstIngredient = 'Orange Vodka';
       break;
       
@@ -75,8 +75,8 @@ So, today, you are going to get an introduction by coding your own cocktail or c
             <div onClick={this.goToEditor.bind(this, 'PINA')}className="selectCocktailButton" style={{background:'rgb(234,181,69)'}}>
               PINA COLADA
             </div>
-            <div onClick={this.goToEditor.bind(this, 'COSMOPOLITAIN')}className="selectCocktailButton" style={{background:'rgb(204,90,123)'}}>
-              COSMOPOLITAIN
+            <div onClick={this.goToEditor.bind(this, 'COSMOPOLITAN')}className="selectCocktailButton" style={{background:'rgb(204,90,123)'}}>
+              COSMOPOLITAN
             </div>
             <div onClick={this.goToEditor.bind(this, 'MARGARITA')}className="selectCocktailButton" style={{background:'rgb(64,104,212)'}}>
               MARGARITA

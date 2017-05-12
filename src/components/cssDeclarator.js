@@ -65,7 +65,7 @@ class CssDeclarator extends Component {
               if (this.props.properties[key].positionDependent === false){
                 return (
                   <div key={i}>
-                    <p className="inline cssProperty">{this.props.properties[key].property}: </p>
+                    <p className="inline cssProperty">{this.props.properties[key].propertyName}: </p>
                     <CssInput 
                       changeCss={this.changeCss.bind(this)} 
                       identifier={this.props.item + this.props.properties[key].property + 'Input'} 
