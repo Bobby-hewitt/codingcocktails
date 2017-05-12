@@ -17,11 +17,11 @@ class OrderRender extends Component {
   }
 
   componentWillMount(){
-    console.log(this.props)
     var self = this;
     this.props.FirebaseApp.database().ref('/' + this.props.orderId).once('value').then((database) => {
 
       var data = database.val()
+      console.log(data)
         self.setState({image: data.image, ingredients: data.ingredients, methods: data.methods, title: data.title}, () => {
           var topKeys = Object.keys(data.css)
           for (var i = 0; i < topKeys.length; i++){
@@ -33,7 +33,11 @@ class OrderRender extends Component {
               
               if (value.length > 0){
                 var element = '.render' + topKeys[i]
-                console.log(element)
+                console.log(property)
+                if (property === 'fontSize'){
+                  value = (parseInt(value) /4) * 5
+                  console.log(value)
+                }
                 $(element).css({[property]: value})
                 console.log(topKeys[i], property, value)
               }
@@ -63,7 +67,9 @@ console.log(this.props)
 
   render() {
     return (
-      <div className="rendercontainer" style={{width:'100%', height: '100%', position:'absolute', top:0, left:0, padding:'50px'}} >
+      <div className="rendercontainer" style={{width:'100%', height: '100%', position:'absolute', top:0, left:0}} >
+          <div style={{padding:'20px'}}>
+          <h1 id="getOrderTitle">Coding Cocktails</h1>
           <h1 className="rendertitle rendercontainers">{this.state.title}</h1>
           <div className="renderingredients rendercontainers">
             <h3 className="renderheaders">Ingredients</h3>
@@ -87,6 +93,7 @@ console.log(this.props)
           </div>
           <img src={this.state.image} className="rendercontainers renderimage" style={{zIndex: -1}}/>
           {(this.state.loading) ? <LoadingScreen/> : null}
+          </div>
       </div>
     );
   }

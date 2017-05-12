@@ -3,8 +3,9 @@ import './App.css';
 import $ from "jquery";
 import HtmlContainer from './components/htmlContainer'
 import CssContainer from './components/cssContainer'
-import Helper from './components/helper'
 import { Link } from 'react-router-dom'
+import KnockupRender from './components/knockupRender'
+import Helper from './components/helper'
 
 class App extends Component {
 
@@ -253,8 +254,8 @@ class App extends Component {
       title: this.state.title,
       methods: this.state.methods,
       ingredients: this.state.ingredients,
+      copyright: this.state.copyright,
       css: {
-        copyright: this.state.copyright,
         listItem: this.state.listItemCss,
         container: this.state.containerCss,
         image: this.state.imageCss,
@@ -270,6 +271,7 @@ class App extends Component {
     this.props.FirebaseApp.database().ref('/').update({
         [orderNumber]: data
     })
+    console.log(data)
     var url = '/order-confirmation/' + orderNumber
     this.props.history.replace(url,'localhost:3000/')
     
@@ -326,40 +328,10 @@ class App extends Component {
               </div>
             </div>
           </div>
-
-
-          <div className="sectionContainer containerCss" id="rightContainer">
-            <div className="confusingContainer">
-            {(this.state.helper) ? <Helper /> : null}
-            <h1 className="titleCss containersCss">{this.state.title}</h1>
-
-            <div className="ingredientsCss containersCss">
-              <h3 className="headersCss">Ingredients</h3>
-              <ul>
-                {this.state.ingredients.map((ingredient, i) => {
-                  return(
-                    <li className="ingredientCss listItemCss" key={i}>{ingredient}</li>
-                  )
-                })}
-              </ul>
-            </div>
-
-            <div className="methodsCss containersCss">
-            <h3 className="headersCss">Method</h3>
-              <ul>
-                {this.state.methods.map((method, i) => {
-                  return(
-                    <li className="methodCss listItemCss" key={i}>{method}</li>
-                  )
-                })}
-              </ul>
-            </div>
-            <img className="imageCss containersCss" src={this.state.image} />
-            <p>{this.state.copyright}</p>
-
+          <div className="sectionContainer" id="rightContainer">
+          {(this.state.helper) ? <Helper /> : null }
+            <KnockupRender {...this.state} />
           </div>
-          </div>
-          
         </div>
       );
 

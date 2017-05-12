@@ -12,6 +12,10 @@ class GetOrder extends Component {
     }
   }
 
+  componentWillMount(){
+    console.log(this.props.match.params.id)
+  }
+
   submitOrder(orderNumber){
     console.log(orderNumber)
   }
@@ -21,12 +25,9 @@ class GetOrder extends Component {
     return(
       <div id="getOrderContainer">
 <h1 id="getOrderTitle">Coding Cocktails</h1>
-<img src={require('../images/logoWhite.png')} id="orderRenderLogo" />
-        <div id="getOrderContentContainer">
          
-          <OrderRender orderId={this.props.match.params.id}FirebaseApp={this.props.FirebaseApp}/>
-        </div>
-      </div>
+          <OrderRender orderId={this.props.match.params.id} FirebaseApp={this.props.FirebaseApp}/>
+         </div>
     )
 
   }

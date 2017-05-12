@@ -80,15 +80,7 @@ font-family: 'Droid Sans', sans-serif;
   width:100px;
 }
 
-.containerCss{
-  background-position: center;
-  overflow: hidden;
-  position: absolute;
-  left:50%;
-  height:100%;
-  width:50%;
 
-}
 
 #leftNav{
   position: relative;
@@ -238,17 +230,87 @@ font-family: 'Droid Sans', sans-serif;
   width:100%;
 }
 
+
+
+
+
+
+
+
+
 #rightContainer{
-    overflow: scroll;
+    background-position: center;
+  overflow: hidden;
+  position: absolute;
+  left:50%;
+  height:100%;
   width:50%;
+    overflow: hidden;
+  width:50%;background: rgb(255,255,255); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(255,255,255,1) 19%, rgba(237,237,237,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 19%,rgba(237,237,237,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(255,255,255,1) 19%,rgba(237,237,237,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
 }
 
-.confusingContainer{
-  overflow: scroll;
-  padding: 30px;
-    overflow: scroll;
-
+#iphoneKnockup{
+  width:100%;
+  height: 100%;
 }
+
+.knockupContainer{
+  transform:translate(-50%, -50%);
+  width:320px;
+  height:auto;
+  top:50%;
+  left:50%;
+  position:absolute;
+  overflow: hidden;
+}
+
+.iphoneContainer {
+  position: relative;
+}
+
+.iphoneContainer img {
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.scrollableContainer {
+   background:white;
+  padding: 5%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  bottom:10%;
+  width: 90%;
+
+  overflow-y: scroll; 
+  z-index: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .htmlAttr{
     color:rgb(102,217,239);
 }
@@ -356,11 +418,9 @@ list-style-position: inside;
 
 #getOrderTitle{
   z-index: 10;
-  color:#f1f1f1;
+  color:black;
   font-family: satisfy;
-  font-size: 50px;
-  margin-left: 50px;
-  margin-top: 50px;
+  font-size: 40px;
 }
 
 #orderNumberContainer{
@@ -527,11 +587,13 @@ opacity: 1;
 #helperContainer{
   background-color: #272822;
   position: absolute;
-  top:30px;
-  right:30px;
+  top:10px;
+  right:10px;
  color:#f1f1f1;
   border-radius: 20px;
-  padding:30px;
-  width:200px;
+  padding:15px;
+  text-align: center;
+  width:150px;
+  z-index: 2;
 }
 

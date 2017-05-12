@@ -36,7 +36,7 @@ class CssDeclarator extends Component {
 
   render() {
     
-    if (this.props.hasPosition !== true || (this.props.hasPosition && this.props.properties['position'].value.indexOf('absolute') > 0)){
+    if (this.props.hasPosition !== true || (this.props.hasPosition && this.props.properties['position'].value.includes('absolute'))){
       return (
 
         <div>
