@@ -18,8 +18,8 @@ class App extends Component {
       title: '...',
       image: require('./images/cocktail.png'),
       fullscreen: false,
-      methods: ['Select your glass','...','...'],
-      ingredients: ['...','...','...'],
+      methods: ['Select your glass','Type method','Type method'],
+      ingredients: ['Type ingedredient here','Type ingedredient here','Type ingedredient here'],
       copyright: "© ${YOUR NAME} 2017",
         containersCss: {
           marginTop: {property: 'marginTop', value: '  ', positionDependent: false, propertyName: 'margin-top'},
@@ -48,7 +48,7 @@ class App extends Component {
         },
         containerCss: {
           backgroundColor: {property: 'backgroundColor', value: 'white', positionDependent:false, propertyName: 'background-color'},
-          paddingTop: {property: 'paddingTop', value: '', positionDependent:false, propertyName: 'padding-top'},
+          paddingTop: {property: 'paddingTop', value: '50px', positionDependent:false, propertyName: 'padding-top'},
         },
         listItemCss: {
           color: {property: 'color', value: '', positionDependent:false, propertyName: 'color'},
@@ -95,7 +95,7 @@ class App extends Component {
       this.setState({
                       image: 'http://www.pngmart.com/files/4/Mojito-Transparent-Background.png',
                       title: this.props.match.params.title, 
-                      ingredients: [this.props.match.params.firstIngredient, '...', '...'],
+                      ingredients: [this.props.match.params.firstIngredient, 'Type ingredient', 'Type ingredient'],
                       ingredientsComment: 'A standard Mojito usually contains Bacardi Carta Blanco, fresh lime, mint leaves, brown sugar, soda water'
                     })
       break
@@ -104,7 +104,7 @@ class App extends Component {
       this.setState({
                       image: 'http://cookdiary.net/wp-content/uploads/images/Pina-Colada_6552.png',
                       title: this.props.match.params.title, 
-                      ingredients: [this.props.match.params.firstIngredient, '...', '...'],
+                      ingredients: [this.props.match.params.firstIngredient, 'Type ingredient', 'Type ingredient'],
                       ingredientsComment: 'A standard Pina Colada usually contains Fresh pineapple chunks, pineapple Juice, caster sugar, coconut cream, Bacardi Carta Blanco'
                     })
       break
@@ -113,7 +113,7 @@ class App extends Component {
       this.setState({
                       image: 'http://www.uvvodka.com/wp-content/uploads/2013/01/recipelarge_crancosmo.png',
                       title: this.props.match.params.title, 
-                      ingredients: [this.props.match.params.firstIngredient, '...', '...'],
+                      ingredients: [this.props.match.params.firstIngredient, 'Type ingredient', 'Type ingredient'],
                       ingredientsComment: 'A standard Cosmopolitan usually contains orange vodka, Cointreau liqueur, cranberry juice, lime juice'
                     })
       break 
@@ -122,7 +122,7 @@ class App extends Component {
       this.setState({
                       image: 'https://img.clipartfest.com/dd80746a4d7a366cf720b7fea6fcb6c6_margarita-clipart-margarita-clip-art-images-clipartallcom-margarita-clipart-transparent_652-1097.png',
                       title: this.props.match.params.title, 
-                      ingredients: [this.props.match.params.firstIngredient, '...', '...'],
+                      ingredients: [this.props.match.params.firstIngredient, 'Type ingredient', 'Type ingredient'],
                       ingredientsComment: 'A standard Margarita usually contains tequila, triple sec liqueur, lime juice, 1 lime wedge, salt'
                     })
       break 
@@ -131,7 +131,7 @@ class App extends Component {
       this.setState({
                       image: 'https://cdn.monin.com/m/media/catalog/product/cache/1/small_image/400x/1b6ac95abd88a964e3097b207dd0be58/B/l/Blackberry_Green_Tea-20170331083336.png',
                       title: this.props.match.params.title, 
-                      ingredients: [this.props.match.params.firstIngredient, '...', '...'],
+                      ingredients: [this.props.match.params.firstIngredient, 'Type ingredient', 'Type ingredient'],
                       ingredientsComment: 'A standard Blackberry Mint Spritzer usually contains blackberries, mint leaves, lime Juice, simple syrup, soda water'
                     })
       break 
@@ -140,9 +140,6 @@ class App extends Component {
 
   }
 
-  componentDidMount(){
-    window.onbeforeunload = function() { return "Your work will be lost." };
-  }
 
   changeCss(item, property, value){
     this.setState({helper: false})
@@ -213,12 +210,12 @@ class App extends Component {
     switch(item){
       case 'methods':
       var methods = this.state.methods;
-      methods.push('...')
+      methods.push('Type method')
       this.setState({methods})
       break;
       case 'ingredients':
       var ingredients = this.state.ingredients;
-      ingredients.push('...')
+      ingredients.push('Type ingredient')
       this.setState({ingredients})
       break;
 

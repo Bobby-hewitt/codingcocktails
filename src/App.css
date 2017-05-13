@@ -102,9 +102,14 @@ font-family: 'Droid Sans', sans-serif;
 .editableContent{
   font-size: 18px;
   font-weight: bolder;
-  background:rgb(60,60,60);
   color:white;
 } 
+.editableContent.placeholder {
+  color: #666;
+}
+.editableContent:hover, .editableContent:focus {
+  background:rgb(60,60,60);
+}
 
 .editableContent:focus{
   outline: none;
@@ -138,6 +143,7 @@ font-family: 'Droid Sans', sans-serif;
   border-radius:8px;
   line-height: 15px;
   border:none;
+  cursor: pointer;
 
 }
 
@@ -156,7 +162,7 @@ font-family: 'Droid Sans', sans-serif;
 }
 
 .uneditable{
-  color:rgb(255,200,200);
+  color:rgb(230, 215, 93);
   background:none;
 }
 
@@ -212,6 +218,12 @@ font-family: 'Droid Sans', sans-serif;
 .cssValue{
   margin-left: 5px;
   color:white;
+  min-width: 200px; 
+}
+.cssValue:hover, .cssValue:focus {
+  border: 0;
+  outline: 0;
+  background:rgb(60,60,60);
 }
 
 .cssBracket{
@@ -285,6 +297,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 }
 
 .scrollableContainer {
+  padding-top: 50px;
    background:white;
     margin-right: 5%;
 
@@ -490,9 +503,6 @@ list-style-position: inside;
 }
 
 
-#selectCocktailContainer{
-
-}
 #selectCocktailHeader{
   text-align: center;
   margin-bottom: 10px;

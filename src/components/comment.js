@@ -20,9 +20,10 @@ class Comment extends Component {
 
   render() {
     return (
-      <p className="comment" style={{marginLeft: this.props.margin}}>{this.state.openTag + ' ' + this.props.comment + ' ' + this.state.closeTag}</p>
+      <p className="comment" style={{marginLeft: this.props.margin}}>{this.state.openTag} <br/> {this.props.comment} <br/> {this.state.closeTag}</p>
     );
   }
 }
 
 export default Comment;
+
