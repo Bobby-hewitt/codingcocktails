@@ -205,6 +205,10 @@ font-family: 'Droid Sans', sans-serif;
    margin-left: 15px;
   color:rgb(102,217,239);
 }
+.cssProperty.uneditable{
+   margin-left: 15px;
+  color:rgb(101,101,101);
+}
 .cssValue{
   margin-left: 5px;
   color:white;
@@ -298,6 +302,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
 }
 
 
+.headerContainer{  
+  padding-right: 10px;
+  padding-bottom: 10px;
+  margin-top: 15%;
+  padding-top: 13%;
+  text-align: center;
+  width:100%;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 1;
+}
+
 
 
 
@@ -385,6 +402,7 @@ list-style-position: inside;
 
 
 .rendercontainer{
+  list-style-position: inside;
   overflow:scroll;
   overflow-x:hidden;
 }
@@ -392,7 +410,8 @@ list-style-position: inside;
 
 
 
-#getOrderTitle{
+#headerContent{
+  color:blue;
   z-index: 10;
   color:black;
   font-family: satisfy;
@@ -540,32 +559,23 @@ opacity: 1;
   z-index: 2;
 }
 
-.headerContainer{  
-  padding-right: 10px;
-  padding-bottom: 10px;
-  margin-top: -10%;
-  padding-top: 13%;
-  text-align: center;
-  width:100%;
-}
 .footerContainerCss{  
   width:100%;
-  margin-left: -5%;
   padding-left: 10%;
     padding-right: 10px;
 }
 .renderheaderContainer{  
-  padding-right: 10px;
-  padding-bottom: 10px;
-  margin-top: -10%;
-  padding-top: 13%;
+position:fixed;
+top:0;
+left:0;
+padding-top: 10px;
+padding-bottom: 10px;
   text-align: center;
   width:100%;
 }
-.renderfooterContainerCss{  
+.renderfooterContainer{  
+
   width:100%;
-  margin-left: -5%;
-  padding-left: 10%;
-    padding-right: 10px;
+    padding-left: 5%;
 }
 

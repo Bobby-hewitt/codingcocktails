@@ -52,13 +52,13 @@ class HtmlContainer extends Component {
 			
 
 			<Comment lang='html' comment="'h' tags are for headers.  <h1> is the biggest, it goes right through to <h6>"/>
-			<HtmlTag margin='45px' contenteditable={true} content={this.props.title} tag="h1" renderId="title"  renderClass="container" updateState={this.updateState.bind(this)} index="0" item="title"identifier="title"/>
+			<HtmlTag margin='45px' contenteditable={true} content={this.props.title} tag="h1" renderId="title"  renderClass="contentBlock" updateState={this.updateState.bind(this)} index="0" item="title"identifier="title"/>
 			   	
 
 			 <ImageTag identifier="imageTag" margin="45px" index="0" item="image" updateState={this.updateState.bind(this)} content={this.props.image}/>
 			
 			{/*ingredients*/}
-			<HtmlSingleTag tag="article" renderClass="ingredients container" margin="45px" />
+			<HtmlSingleTag tag="article" renderClass="ingredients contentBlock" margin="45px" />
 			<HtmlTag margin='60px' contenteditable={false} content="Ingredients" tag="h3" identifier="uneditable"/>
 			<HtmlSingleTag tag="ul" margin="60px" />
 			<Comment lang='html' comment={this.props.ingredientsComment}/>
@@ -70,7 +70,7 @@ class HtmlContainer extends Component {
 			<button onClick={this.addItem.bind(this, 'ingredients')} className="inline button addButton" style={{marginLeft: '75px'}}>+</button>
 			<HtmlSingleTag tag="/ul" margin="60px" />
 			<HtmlSingleTag tag="/article" margin="45px" />
-			<HtmlSingleTag tag="article" renderClass="method container" margin="45px" />
+			<HtmlSingleTag tag="article" renderClass="method contentBlock" margin="45px" />
 			<HtmlTag margin='60px' contenteditable={false} content="Method" tag="h3" identifier="uneditable"/>
 			<HtmlSingleTag tag="ol" margin="60px" />
 			{this.props.methods.map((method, i) => {

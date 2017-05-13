@@ -20,13 +20,12 @@ class App extends Component {
       fullscreen: false,
       methods: ['Select your glass','...','...'],
       ingredients: ['...','...','...'],
-      copyright: "...'s drink order",
+      copyright: "© ${YOUR NAME} 2017",
         containersCss: {
           marginTop: {property: 'marginTop', value: '  ', positionDependent: false, propertyName: 'margin-top'},
         },
         headerContainerCss: {
           backgroundColor: {property: 'backgroundColor', value: 'white', positionDependent:false, propertyName: 'background-color'},
-           marginBottom: {property: 'marginBottom', value: '  ', positionDependent: false, propertyName: 'margin-bottom'},
           borderBottomColor: {property: 'borderBottomColor', value: '  ', positionDependent: false, propertyName: 'border-bottom-color'},
           borderBottomWidth: {property: 'borderBottomWidth', value: '  ', positionDependent: false, propertyName: 'border-bottom-width'},
           borderBottomStyle: {property: 'borderBottomStyle', value: '  ', positionDependent: false, propertyName: 'border-bottom-style'},
@@ -49,6 +48,7 @@ class App extends Component {
         },
         containerCss: {
           backgroundColor: {property: 'backgroundColor', value: 'white', positionDependent:false, propertyName: 'background-color'},
+          paddingTop: {property: 'paddingTop', value: '', positionDependent:false, propertyName: 'padding-top'},
         },
         listItemCss: {
           color: {property: 'color', value: '', positionDependent:false, propertyName: 'color'},

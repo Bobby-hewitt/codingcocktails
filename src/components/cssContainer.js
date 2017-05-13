@@ -23,14 +23,14 @@ class CssContainer extends Component {
     	<Comment lang='css' comment="Some font families you can use are: Satisfy, Dancing Script, Droid Sans, Love Ya Like A Sister, Josefin Sans, Francois One, Archivo Black, Cinzel, Righteous, Cardo"/>
     	
         <Comment lang='css' comment="It all looks a bit cramped at the moment, try adding a margin of '20px' to all the containers. The . before 'container' targets the class specified in the HTML, # targets the id"/>
-            <CssDeclarator changeCss={this.changeCss.bind(this)} item="headerContainerCss" declarator="#headerContainer" properties={this.props.headerContainerCss}/>
+            <CssDeclarator changeCss={this.changeCss.bind(this)} item="headerContainerCss" declarator="#headerContainer" properties={this.props.headerContainerCss}comments={['position: fixed;', 'top: 0px;', 'left: 0px;']}/>
         <Comment lang='css' comment="It all looks a bit cramped at the moment, try adding a margin of '20px' to all the containers. The . before 'container' targets the class specified in the HTML, # targets the id"/>
             <CssDeclarator changeCss={this.changeCss.bind(this)} item="headerContentCss" declarator="#headerContent" properties={this.props.headerContentCss}/>
        
     	
     	<Comment lang='css' comment="It all looks a bit cramped at the moment, try adding a margin of '20px' to all the containers. The . before 'container' targets the class specified in the HTML, # targets the id"/>
     	
-    		<CssDeclarator changeCss={this.changeCss.bind(this)} item="containersCss" declarator=".container" properties={this.props.containersCss}/>
+    		<CssDeclarator changeCss={this.changeCss.bind(this)} item="containersCss" declarator=".contentBlock" properties={this.props.containersCss}/>
     	<Comment lang='css' comment="Now let's set a background colour.  You can write a color like 'red' or 'lightBlue' or you can write a hex code like '#61C6E8'. find the right colour at https://www.webpagefx.com/web-design/color-picker"/>	
     		<CssDeclarator changeCss={this.changeCss.bind(this)} item="containerCss" declarator="#background" properties={this.props.containerCss}/>
     	<Comment lang='css' comment="You need to set a width and height for the image.  This can be in px but it makes more sense to size these as a percentage of the container (e.g. '50%'), that way when the screen changes size it won't get too messy.  You can set one value to 'auto' so the image doesn't get distorted"/>	

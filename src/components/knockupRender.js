@@ -9,11 +9,12 @@ class KnockupRender extends Component {
     return (
            <div className="knockupContainer">
             <div className="iphoneContainer">
+            <div className="headerContainerCss headerContainer">
+   						<h1 id="headerContent" className="headerContentCss">Coding Cocktails</h1>
+   					</div>
             	<img id="iphoneKnockup" src={require('../images/iphone.png')} />
    				<div className="scrollableContainer containerCss">
-   					<div className="headerContainerCss headerContainer">
-   						<h1 id="getOrderTitle" className="headerContentCss">Coding Cocktails</h1>
-   					</div>
+   					
    					<div style={{padding:'5%'}}>
 			            <h1 className="titleCss containersCss">{this.props.title}</h1>
 			            <img className="imageCss containersCss" src={this.props.image} />

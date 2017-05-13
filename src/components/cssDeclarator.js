@@ -39,6 +39,15 @@ class CssDeclarator extends Component {
       return (
         <div>
           <p className="cssBracket"><span className="cssSelector">{this.props.declarator}</span> &#123;</p>
+           
+            { (this.props.comments) ? this.props.comments.map((comments, i) => {
+              console.log()
+                return (
+                    <p key={i}className="cssProperty uneditable">{comments} </p>
+
+                )
+              
+            }) : null}
             {this.state.keys.map((key, i) => {
               if (this.props.properties[key].positionDependent === false){
                 return (
