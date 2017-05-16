@@ -15,17 +15,17 @@ class App extends Component {
       helper: true,
       orderUrl: '',
       orderNumber: '',
-      title: '...',
+      title: 'Name your cocktail',
       image: require('./images/cocktail.png'),
       fullscreen: false,
       methods: ['Select your glass','Type method','Type method'],
       ingredients: ['Type ingedredient here','Type ingedredient here','Type ingedredient here'],
-      copyright: "© ${YOUR NAME} 2017",
+      copyright: "© YOUR NAME 2017",
         containersCss: {
           marginTop: {property: 'marginTop', value: '  ', positionDependent: false, propertyName: 'margin-top'},
         },
         headerContainerCss: {
-          backgroundColor: {property: 'backgroundColor', value: 'white', positionDependent:false, propertyName: 'background-color'},
+          backgroundColor: {property: 'backgroundColor', value: '', positionDependent:false, propertyName: 'background-color'},
           borderBottomColor: {property: 'borderBottomColor', value: '  ', positionDependent: false, propertyName: 'border-bottom-color'},
           borderBottomWidth: {property: 'borderBottomWidth', value: '  ', positionDependent: false, propertyName: 'border-bottom-width'},
           borderBottomStyle: {property: 'borderBottomStyle', value: '  ', positionDependent: false, propertyName: 'border-bottom-style'},
@@ -59,8 +59,6 @@ class App extends Component {
         imageCss:{
           marginLeft: {property: 'marginLeft', value: '', positionDependent: false, propertyName: 'margin-left'},
           width: {property: 'width', value: '', positionDependent: false, propertyName: 'width'},
-          height: {property: 'height', value: '', positionDependent: false, propertyName: 'height'},
-
         },
         titleCss:{
           textAlign: {property: 'textAlign', value: '', positionDependent: false, propertyName: 'text-align'},
@@ -94,7 +92,6 @@ class App extends Component {
       case 'Mojito':
       this.setState({
                       image: 'http://www.pngmart.com/files/4/Mojito-Transparent-Background.png',
-                      title: this.props.match.params.title, 
                       ingredients: [this.props.match.params.firstIngredient, 'Type ingredient', 'Type ingredient'],
                       ingredientsComment: 'A standard Mojito usually contains Bacardi Carta Blanco, fresh lime, mint leaves, brown sugar, soda water'
                     })
@@ -103,7 +100,6 @@ class App extends Component {
       case 'Pina Colada':
       this.setState({
                       image: 'http://cookdiary.net/wp-content/uploads/images/Pina-Colada_6552.png',
-                      title: this.props.match.params.title, 
                       ingredients: [this.props.match.params.firstIngredient, 'Type ingredient', 'Type ingredient'],
                       ingredientsComment: 'A standard Pina Colada usually contains Fresh pineapple chunks, pineapple Juice, caster sugar, coconut cream, Bacardi Carta Blanco'
                     })
@@ -112,7 +108,6 @@ class App extends Component {
       case 'Cosmopolitan':
       this.setState({
                       image: 'http://www.uvvodka.com/wp-content/uploads/2013/01/recipelarge_crancosmo.png',
-                      title: this.props.match.params.title, 
                       ingredients: [this.props.match.params.firstIngredient, 'Type ingredient', 'Type ingredient'],
                       ingredientsComment: 'A standard Cosmopolitan usually contains orange vodka, Cointreau liqueur, cranberry juice, lime juice'
                     })
@@ -121,7 +116,6 @@ class App extends Component {
       case 'Margarita':
       this.setState({
                       image: 'https://img.clipartfest.com/dd80746a4d7a366cf720b7fea6fcb6c6_margarita-clipart-margarita-clip-art-images-clipartallcom-margarita-clipart-transparent_652-1097.png',
-                      title: this.props.match.params.title, 
                       ingredients: [this.props.match.params.firstIngredient, 'Type ingredient', 'Type ingredient'],
                       ingredientsComment: 'A standard Margarita usually contains tequila, triple sec liqueur, lime juice, 1 lime wedge, salt'
                     })

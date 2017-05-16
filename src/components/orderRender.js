@@ -24,6 +24,7 @@ class OrderRender extends Component {
       var data = database.val()
     
         self.setState({image: data.image, ingredients: data.ingredients, methods: data.methods, title: data.title, copyright: data.copyright}, () => {
+          console.log(this.state.title)
           var topKeys = Object.keys(data.css)
     
           for (var i = 0; i < topKeys.length; i++){
@@ -75,7 +76,7 @@ class OrderRender extends Component {
               <h1 id="getOrderTitle" className="renderheaderContent">Coding Cocktails</h1>
             </div>
             <div style={{padding:'5%'}}>
-                  <h1 className="rendertitle rendercontainers">{this.props.title}</h1>
+                  <h1 className="rendertitle rendercontainers">{this.state.title}</h1>
                   <img className="renderimage rendercontainers" src={this.state.image} />
 
                   <div className="renderingredients rendercontainers">

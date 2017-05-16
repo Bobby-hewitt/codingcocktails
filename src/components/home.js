@@ -53,15 +53,15 @@ class ImageTag extends Component {
 
         
             <p id="welcomeText">
-            Hello! We are so excited to welcome you to our Coding Cocktails event. 
+            We are very excited to welcome you to our Coding Cocktails event.<br/><br/>
 
+With software changing every industry, coding is becoming the most talked about and needed skill. <br/><br/>
 
-With software changing every industry, coding is becoming the most talked about and needed skill. 
+Coding is the bridge between humans and computers. It is a set of rules or instructions that tell your computer what you want it to do. <br/><br/>
 
-Coding is a language that allows you to communicate with a computer. It’s not as difficult as you may think! 
+ It’s not as difficult as you may think! So, today, you are going to get an introduction to this world by coding your own mocktail or cocktail.<br/><br/>
 
-
-So, today, you are going to get an introduction by coding your own cocktail or cocktail. 
+Let’s begin! 
             </p>
 
             <div className="horizontalDivider">

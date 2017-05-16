@@ -574,7 +574,6 @@ opacity: 1;
 }
 
 .footerContainerCss{  
-  width:100%;
   padding-left: 10%;
     padding-right: 10px;
 }
@@ -591,5 +590,15 @@ padding-bottom: 10px;
 
   width:100%;
     padding-left: 5%;
+}
+
+.continueButton{
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 3px;
+  width:150px;
+  padding:5px 20px;
+  background: rgb(90,255,95)
+  
 }
 
