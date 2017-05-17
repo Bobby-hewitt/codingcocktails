@@ -94,7 +94,7 @@ class App extends Component {
       this.setState({
                       image: 'http://www.pngmart.com/files/4/Mojito-Transparent-Background.png',
                       ingredients: [this.props.match.params.firstIngredient, 'Type ingredient', 'Type ingredient'],
-                      ingredientsComment: 'A standard Mojito usually contains Bacardi Carta Blanco, fresh lime, mint leaves, brown sugar, soda water'
+                      ingredientsComment: 'A standard Mojito usually contains Bacardi Carta Blanco, fresh lime, mint leaves, brown sugar and soda water.'
                     })
       break
 
@@ -102,7 +102,7 @@ class App extends Component {
       this.setState({
                       image: 'http://cookdiary.net/wp-content/uploads/images/Pina-Colada_6552.png',
                       ingredients: [this.props.match.params.firstIngredient, 'Type ingredient', 'Type ingredient'],
-                      ingredientsComment: 'A standard Pina Colada usually contains Fresh pineapple chunks, pineapple Juice, caster sugar, coconut cream, Bacardi Carta Blanco'
+                      ingredientsComment: 'A standard Pina Colada usually contains Fresh pineapple chunks, pineapple Juice, caster sugar, coconut cream and Bacardi Carta Blanco.'
                     })
       break
 
@@ -110,7 +110,7 @@ class App extends Component {
       this.setState({
                       image: 'http://www.uvvodka.com/wp-content/uploads/2013/01/recipelarge_crancosmo.png',
                       ingredients: [this.props.match.params.firstIngredient, 'Type ingredient', 'Type ingredient'],
-                      ingredientsComment: 'A standard Cosmopolitan usually contains orange vodka, Cointreau liqueur, cranberry juice, lime juice'
+                      ingredientsComment: 'A standard Cosmopolitan usually contains orange vodka, Cointreau liqueur, cranberry juice and lime juice.'
                     })
       break 
 
@@ -118,7 +118,7 @@ class App extends Component {
       this.setState({
                       image: 'https://img.clipartfest.com/dd80746a4d7a366cf720b7fea6fcb6c6_margarita-clipart-margarita-clip-art-images-clipartallcom-margarita-clipart-transparent_652-1097.png',
                       ingredients: [this.props.match.params.firstIngredient, 'Type ingredient', 'Type ingredient'],
-                      ingredientsComment: 'A standard Margarita usually contains tequila, triple sec liqueur, lime juice, 1 lime wedge, salt'
+                      ingredientsComment: 'A standard Margarita usually contains tequila, triple sec liqueur, lime juice, 1 lime wedge and salt.'
                     })
       break 
 
@@ -127,7 +127,7 @@ class App extends Component {
                       image: 'https://cdn.monin.com/m/media/catalog/product/cache/1/small_image/400x/1b6ac95abd88a964e3097b207dd0be58/B/l/Blackberry_Green_Tea-20170331083336.png',
                       title: this.props.match.params.title, 
                       ingredients: [this.props.match.params.firstIngredient, 'Type ingredient', 'Type ingredient'],
-                      ingredientsComment: 'A standard Blackberry Mint Spritzer usually contains blackberries, mint leaves, lime Juice, simple syrup, soda water'
+                      ingredientsComment: 'A standard Blackberry Mint Spritzer usually contains blackberries, mint leaves, lime Juice, simple syrup and soda water.'
                     })
       break 
 
