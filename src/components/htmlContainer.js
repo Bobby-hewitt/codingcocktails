@@ -42,13 +42,13 @@ class HtmlContainer extends Component {
 		      	<HtmlTag margin='30px' index="0" contenteditable={false} item="pageTitle" identifier="uneditable" content="Coding Cocktails" tag="title" />
 		      	<HtmlSingleTag tag="meta charset='UTF-8'" margin="30px" />
 		 
-		      	<Comment lang='html' comment="This is a link to your stylesheet.  You'll style the page later"/>
+		      	<Comment lang='html' comment="This is a link to your stylesheet.  You'll style the page later."/>
 		      	<CssLink margin='30px'/>
 			<HtmlSingleTag tag="/head" margin="15px" />
 	   		{/*body*/}
 	   		<Comment lang='html' comment="The <body> holds all of the information which is ultimately seen by the user."/>
 			<HtmlSingleTag tag="body" margin="15px" />
-			<Comment lang='html' comment=" We give our elements IDs and classes so we can refer to them in other languages, for example, in CSS (Cascading Style Sheets). When you write HTML code from scratch you can make up your own class and id names. We're going to use these classes and IDs to style the components in CSS (see tab named app.css)"/>
+			<Comment lang='html' comment=" We give our elements ids and classes so we can refer to them in other languages, for example, in CSS (Cascading Style Sheets). When you write HTML code from scratch you can make up your own class and id names. We're going to use these classes and ids to style the components in CSS (see tab named app.css)."/>
 			<HtmlSingleTag tag="div" renderId="background" margin="30px" />
 
 
@@ -60,7 +60,7 @@ class HtmlContainer extends Component {
 
 			
 
-			<Comment lang='html' comment="Elements can have a class, an id or both. Ids refer to one-off elements whereas classes refer to groups of elements which behave in the same way. Here we only have one 'title' element so that is the id, but we have lots of content blocks so we are going to use the class name 'contentBlock' throughout"/>
+			<Comment lang='html' comment="Elements can have a class, an id or both. Ids refer to one-off elements whereas classes refer to groups of elements which behave in the same way. Here we only have one 'title' element so that is the id, but we have lots of content blocks so we are going to use the class name 'contentBlock' throughout."/>
 			<HtmlTag margin='45px' contenteditable={true} content={this.props.title} tag="h1" renderId="title"  renderClass="contentBlock" updateState={this.updateState.bind(this)} index="0" item="title"identifier="title"/>
 			   	
 <Comment lang='html' comment="You can put images directly from the web into websites. Copy this link and paste it into a new tab in your browser. You'll see the same image. You can find a url for most images on the web by right-clicking it and selecting 'copy image url'."/>
@@ -71,7 +71,7 @@ class HtmlContainer extends Component {
 			<HtmlSingleTag tag="article" renderClass="ingredients contentBlock" margin="45px" />
 			<HtmlTag margin='60px' contenteditable={false} content="Ingredients" tag="h3" identifier="uneditable"/>
 			
-			<Comment lang='html' comment="Now we're going to add some content ourselves. <ul> tags represent unordered lists. This means it doesn’t get numbered or affect anything if the order is altered. Go ahead and input the ingredients for your cocktail into this list."/>
+			<Comment lang='html' comment="Now, we're going to add some content ourselves. <ul> tags represent unordered lists. This means it doesn’t get numbered or affect anything if the order is altered. Go ahead and input the ingredients for your cocktail into this list."/>
 			<Comment lang='html' comment={this.props.ingredientsComment}/>
 
 			<HtmlSingleTag tag="ul" margin="60px" />
