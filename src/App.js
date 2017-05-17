@@ -42,6 +42,7 @@ class App extends Component {
           fontSize: {property: 'fontSize', value: '', positionDependent:false, propertyName: 'font-size'},
         },
         sectionHeaderCss: {
+          marginBottom: {property: 'marginBottom', value: '', positionDependent: false, propertyName: 'margin-bottom'},
           fontFamily: {property: 'fontFamily', value: '', positionDependent:false, propertyName: 'font-family'},
           color: {property: 'color', value: '', positionDependent:false, propertyName: 'color'},
           fontSize: {property: 'fontSize', value: '', positionDependent:false, propertyName: 'font-size'},
