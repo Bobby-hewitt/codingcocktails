@@ -41,14 +41,14 @@ class HtmlContainer extends Component {
 		   		<Comment lang='html' comment="The title is what shows in the web browser tab."/>
 		      	<HtmlTag margin='30px' index="0" contenteditable={false} item="pageTitle" identifier="uneditable" content="Coding Cocktails" tag="title" />
 		      	<HtmlSingleTag tag="meta charset='UTF-8'" margin="30px" />
-		     <Comment lang='html' comment="The title is what shows in the web browser tab.  In HTML, every tag you open, you have to close, i.e. <title></title>"/>
+		 
 		      	<Comment lang='html' comment="This is a link to your stylesheet.  You'll style the page later"/>
 		      	<CssLink margin='30px'/>
 			<HtmlSingleTag tag="/head" margin="15px" />
 	   		{/*body*/}
 	   		<Comment lang='html' comment="The <body> holds all of the information which is ultimately seen by the user."/>
 			<HtmlSingleTag tag="body" margin="15px" />
-			<Comment lang='html' comment=" We give our elements 'IDs and classes so we can refer to them in other languages, for example, in CSS (Cascading Style Sheets). When you write HTML code from scratch you can make up your own class and id names. We're going to use these classes and IDs to style the components in CSS (see tab named app.css)"/>
+			<Comment lang='html' comment=" We give our elements IDs and classes so we can refer to them in other languages, for example, in CSS (Cascading Style Sheets). When you write HTML code from scratch you can make up your own class and id names. We're going to use these classes and IDs to style the components in CSS (see tab named app.css)"/>
 			<HtmlSingleTag tag="div" renderId="background" margin="30px" />
 
 
